@@ -33,9 +33,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/kattmingming/sequence"
 	"github.com/spf13/cobra"
 	"github.com/surge/glog"
-	"github.com/trustpath/sequence"
 )
 
 var (

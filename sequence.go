@@ -108,3 +108,8 @@ func (this Sequence) PrintTokens() string {
 
 	return str[:len(str)-1]
 }
+
+// Longstring returns a multi-line representation of the tokens in the sequence
+func (this Sequence) GetTokens() []Token {
+	return this
+}

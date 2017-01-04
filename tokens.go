@@ -41,11 +41,19 @@ type Token struct {
 	plus  bool // For parser, should this token consume one or more tokens
 	star  bool // For parser, should this token consume zero or more tokens
 
+	Author     string
+	Commit     string
+	Date       string
+	LocAdded   string
+	LocRemoved string
+	Entity     string
+	Email      string
+
 	until string // For parser, consume all tokens until, but not including, this string
 }
 
 func (this Token) String() string {
-	return fmt.Sprintf("{ Tag=%q, Type=%q, Value=%q, isKey=%t, isValue=%t, minus=%t, plus=%t, star=%t }", this.Tag, this.Type, this.Value, this.isKey, this.isValue, this.minus, this.plus, this.star)
+	return fmt.Sprintf("{ value=%q author=%q commit=%q date=%q locAdded=%q locRemoved=%q Entity=%q, Email=%q }", this.Value, this.Author, this.Commit, this.Date, this.LocAdded, this.LocRemoved, this.Entity, this.Email)
 }
 
 const (
